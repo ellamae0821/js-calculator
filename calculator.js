@@ -16,8 +16,8 @@ var calculatorModule = (function (){
    * @return { Number }    current total
    */
    function load (xLoad){
-    inspect(newTotal);
-    total = x;
+    inspect(xLoad);
+    total = xLoad;
     return total;
    }
 
@@ -36,8 +36,8 @@ var calculatorModule = (function (){
    * @param { Number } x
    */
    function add(x){
-    inspect(num);
-    total += num;
+    inspect(x);
+    total += x;
     return total;
    }
 
@@ -47,8 +47,8 @@ var calculatorModule = (function (){
    * @param  { Number } x
    */
    function subtract(x){
-    inspect(num);
-    total -= num;
+    inspect(x);
+    total -= x;
     return total;
    }
 
@@ -58,8 +58,8 @@ var calculatorModule = (function (){
    * @param  { Number } x
    */
    function multiply(x){
-    inspect(num);
-    total *= num;
+    inspect(x);
+    total *= x;
     return total;
    }
 
@@ -69,8 +69,8 @@ var calculatorModule = (function (){
    * @param  { Number } x
    */
    function divide(x){
-    inspect(num);
-    total /= num;
+    inspect(x);
+    total /= x;
     return total;
 
    }
