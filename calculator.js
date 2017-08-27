@@ -6,17 +6,16 @@
  * @return {object} `calculator` object that can be used
  */
 
-var calculatorModule = function (){
+var calculatorModule = (function (){
   var memory = 0;
   var total = 0;
-
 
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
-   function load (x){
+   function load (xLoad){
     inspect(newTotal);
     total = x;
     return total;
@@ -36,7 +35,7 @@ var calculatorModule = function (){
    * Sums the value passed in with `total`
    * @param { Number } x
    */
-   function add(num){
+   function add(x){
     inspect(num);
     total += num;
     return total;
@@ -47,7 +46,7 @@ var calculatorModule = function (){
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
-   function subtract(num){
+   function subtract(x){
     inspect(num);
     total -= num;
     return total;
@@ -58,7 +57,7 @@ var calculatorModule = function (){
    * Multiplies the value by `total`
    * @param  { Number } x
    */
-   function multiply(num){
+   function multiply(x){
     inspect(num);
     total *= num;
     return total;
@@ -69,7 +68,7 @@ var calculatorModule = function (){
    * Divides the value passing in by `total`
    * @param  { Number } x
    */
-   function divide(num){
+   function divide(x){
     inspect(num);
     total /= num;
     return total;
@@ -114,5 +113,19 @@ var calculatorModule = function (){
     }
   }
 
+  var calculator = {
+    load:load,
+    getTotal:getTotal,
+    add:add,
+    subtract:subtract,
+    multiply:multiply,
+    divide: divide,
+    recallMemory: recallMemory,
+    saveMemory: saveMemory,
+    clearMemory: clearMemory
+  };
 
-};
+  return calculator;
+});
+
+
