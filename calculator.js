@@ -69,7 +69,12 @@ var calculatorModule = function (){
    * Divides the value passing in by `total`
    * @param  { Number } x
    */
+   function divide(num){
+    inspect(num);
+    total /= num;
+    return total;
 
+   }
 
   /**
    * Return the value stored at `memory`
