@@ -128,4 +128,10 @@ var calculatorModule = (function (){
   return calculator;
 });
 
+var calcTest = calculatorModule();
+calcTest.add(50);
+calcTest.add(50);
+calcTest.multiply(2);
+console.log(calcTest.getTotal());
+
 
