@@ -1,4 +1,4 @@
-/**
+console.log('sanity check')/**
  * Declare a function named `calculatorModule`
  * this function will have two private variables declared inside of it.
  * @variable PRIVATE { Number } `memory`
@@ -126,12 +126,12 @@ var calculatorModule = (function (){
   };
 
   return calculator;
-});
-
+}());
+/*
 var calcTest = calculatorModule();
 calcTest.add(50);
 calcTest.add(50);
 calcTest.multiply(2);
-console.log(calcTest.getTotal());
+console.log(calcTest.getTotal());*/
 
 
